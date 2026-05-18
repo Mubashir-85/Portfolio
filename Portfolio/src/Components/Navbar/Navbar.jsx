@@ -3,21 +3,46 @@ import React from 'react'
 function Navbar() {
   return (
     <>
-    <nav className='bg-black w-full h-16 items-center'>
-        <div className='flex justify-between items-center w-full h-full px-4'>
-            <div className='text-center flex justify-center items-center'>
-                <h1 className='text-white sm:text-xl lg:text-2xl font-bold flex justify-center  mx-auto items-center text-center'>Portfolio</h1>
-            </div>
-            <div className='hidden md:flex justify-center items-center'>
-                <ul className='flex justify-center items-center'>
-                    <li className='text-white text-sm sm:text-base lg:text-lg font-medium mx-4 cursor-pointer'>Home</li>
-                    <li className='text-white text-sm sm:text-base lg:text-lg font-medium mx-4 cursor-pointer'>About</li>
-                    <li className='text-white text-sm sm:text-base lg:text-lg font-medium mx-4 cursor-pointer'>Projects</li>
-                    <li className='text-white text-sm sm:text-base lg:text-lg font-medium mx-4 cursor-pointer'>Contact</li>
-                </ul>
-            </div>
+      <nav className='fixed top-0 left-0 w-full h-20 z-50 bg-zinc-950/90 backdrop-blur-2xl border-b border-zinc-800/50'>
+        <div className='flex justify-between items-center w-full h-full px-6 lg:px-20 max-w-7xl mx-auto'>
+          
+          {/* Logo - Pure Text */}
+          <div className='group cursor-pointer'>
+            <h1 className='text-2xl lg:text-4xl font-black tracking-tight'>
+              <span className='bg-gradient-to-r from-emerald-400 via-teal-400 to-cyan-400 bg-clip-text text-transparent group-hover:from-emerald-300 group-hover:via-teal-300 group-hover:to-cyan-300 transition-all duration-500'>
+                Portfolio
+              </span>
+            </h1>
+          </div>
+
+          {/* Desktop Navigation */}
+          <div className='hidden md:flex items-center gap-1'>
+            {['Home', 'About', 'Projects', 'Contact'].map((item) => (
+              <a
+                key={item}
+                className='relative px-5 py-2.5 text-sm lg:text-base font-medium text-zinc-500 hover:text-emerald-400 transition-colors duration-300 group overflow-hidden'
+              >
+                <span className='relative z-10'>{item}</span>
+                <div className='absolute bottom-0 left-0 w-full h-[2px] bg-gradient-to-r from-emerald-400 to-cyan-400 transform -translate-x-full group-hover:translate-x-0 transition-transform duration-500 ease-out' />
+              </a>
+            ))}
+            <button className='ml-6 px-7 py-2.5 rounded-full border border-emerald-500/30 text-emerald-400 text-sm font-semibold hover:bg-emerald-500/10 hover:border-emerald-500/60 hover:shadow-[0_0_20px_rgba(16,185,129,0.15)] active:scale-95 transition-all duration-300'>
+              Let's Talk
+            </button>
+          </div>
+
+          {/* Mobile Menu Button - Text Only */}
+          <div className='md:hidden'>
+            <button className='text-zinc-400 hover:text-emerald-400 font-medium text-sm tracking-wide transition-colors duration-300'>
+              MENU
+            </button>
+          </div>
+
         </div>
-    </nav>
+      </nav>
+
+      {/* Spacer */}
+      <div className='h-20' />
     </>
   )
 }
