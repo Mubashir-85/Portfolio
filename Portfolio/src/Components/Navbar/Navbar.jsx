@@ -6,13 +6,29 @@ function Navbar() {
       <nav className='fixed top-0 left-0 w-full h-20 z-50 bg-zinc-950/90 backdrop-blur-2xl border-b border-zinc-800/50'>
         <div className='flex justify-between items-center w-full h-full px-6 lg:px-20 max-w-7xl mx-auto'>
           
-          {/* Logo - Pure Text */}
-          <div className='group cursor-pointer'>
-            <h1 className='text-2xl lg:text-4xl font-black tracking-tight'>
-              <span className='bg-gradient-to-r from-emerald-400 via-teal-400 to-cyan-400 bg-clip-text text-transparent group-hover:from-emerald-300 group-hover:via-teal-300 group-hover:to-cyan-300 transition-all duration-500'>
-                Portfolio
-              </span>
+          {/* Logo - Shimmer Animation */}
+          <div className='group cursor-pointer relative overflow-hidden'>
+            <h1 
+              className='text-2xl lg:text-4xl font-black tracking-tight bg-gradient-to-r from-emerald-400 via-teal-400 to-cyan-400 bg-clip-text text-transparent'
+              style={{
+                backgroundImage: 'linear-gradient(90deg, #34d399 0%, #2dd4bf 25%, #22d3ee 50%, #2dd4bf 75%, #34d399 100%)',
+                backgroundSize: '200% auto',
+                WebkitBackgroundClip: 'text',
+                WebkitTextFillColor: 'transparent',
+                animation: 'shimmer 3s linear infinite'
+              }}
+            >
+              Portfolio
             </h1>
+            <div 
+              className='absolute inset-0 pointer-events-none'
+              style={{
+                background: 'linear-gradient(90deg, transparent 0%, rgba(255,255,255,0.1) 50%, transparent 100%)',
+                backgroundSize: '200% 100%',
+                animation: 'shimmer 3s linear infinite',
+                mixBlendMode: 'overlay'
+              }}
+            />
           </div>
 
           {/* Desktop Navigation */}
@@ -31,7 +47,7 @@ function Navbar() {
             </button>
           </div>
 
-          {/* Mobile Menu Button - Text Only */}
+          {/* Mobile Menu Button */}
           <div className='md:hidden'>
             <button className='text-zinc-400 hover:text-emerald-400 font-medium text-sm tracking-wide transition-colors duration-300'>
               MENU
@@ -41,8 +57,14 @@ function Navbar() {
         </div>
       </nav>
 
-      {/* Spacer */}
       <div className='h-20' />
+
+      <style>{`
+        @keyframes shimmer {
+          0% { background-position: 200% center; }
+          100% { background-position: -200% center; }
+        }
+      `}</style>
     </>
   )
 }

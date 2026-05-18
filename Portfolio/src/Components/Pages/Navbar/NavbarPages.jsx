@@ -9,4 +9,4 @@ function NavbarPages() {
   )
 }
 
-export default Navbar
+export default NavbarPages
