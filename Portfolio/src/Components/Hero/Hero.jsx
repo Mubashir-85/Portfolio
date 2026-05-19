@@ -62,7 +62,7 @@ function Hero() {
             className="text-3xl lg:text-5xl font-bold tracking-wide text-[#fbbf24] mb-2"
             style={{ fontFamily: "'Playfair Display', 'Georgia', serif" }}
           >
-            Hi, Mubashir here! <span className="wave inline-block">👋</span>
+            Hi, Mubashir here!
           </h2>
           
           {/* Typewriter Effect Container */}
