@@ -10,7 +10,7 @@ function AppRoutes() {
       <div>
       <Routes>
         <Route path='/' element={<Layout />}>
-          <Route path='/Hero' element={<HeroPage />} />
+          <Route path='/' element={<HeroPage />} />
           <Route path='/Projects' element={<ProjectPages />} />
         </Route>
       </Routes>

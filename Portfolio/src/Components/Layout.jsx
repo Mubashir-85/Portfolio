@@ -8,7 +8,7 @@ function Layout() {
     <>
     <NavbarPages/>
     <Outlet/>
-    <HeroPage/>
+    
     </>
   )
 }
