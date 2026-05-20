@@ -1,3 +1,5 @@
+// import { Link } from "lucide-react";
+import { Link } from "react-router-dom";
 import React from "react";
 
 function Navbar() {
@@ -50,15 +52,15 @@ function Navbar() {
 
           {/* Desktop Navigation */}
           <div className="hidden md:flex items-center gap-2">
-            {navLinks.map((item) => (
-              <a
-                key={item}
+            {navLinks.map((item,index) => (
+              <li
+                key={index}
                 className="relative px-5 py-2.5 text-sm lg:text-base font-medium text-[#a8a29e] hover:text-[#fafaf9] transition-all duration-300 group overflow-hidden"
                 style={{ fontFamily: "'Inter', 'system-ui', sans-serif" }}
               >
-                <span className="relative z-10 tracking-wide">{item}</span>
+                <Link to={item.path} className="relative z-10 tracking-wide">{item.name}</Link>
                 <div className="absolute bottom-0 left-1/2 w-0 h-[2px] bg-[#f59e0b] group-hover:w-full group-hover:left-0 transition-all duration-400 ease-out" />
-              </a>
+              </li>
             ))}
             <button
               className="ml-6 px-7 py-2.5 rounded-full bg-[#1c1917] border border-[#44403c] text-[#fbbf24] text-sm font-semibold hover:bg-[#d97706] hover:text-white hover:border-[#f59e0b] hover:shadow-[0_0_25px_rgba(245,158,11,0.2)] active:scale-95 transition-all duration-300"

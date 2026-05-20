@@ -1,16 +1,22 @@
 import React from 'react'
-import NavbarPages from '../Pages/Navbar/NavbarPages'
 import HeroPage from '../Pages/Hero/HeroPage'
+import ProjectPages from '../Pages/Project/ProjectPages'
+import { Route,Routes } from 'react-router-dom'
+import Layout from '../Layout'
 
-function Routes() {
+function AppRoutes() {
   return (
     <>
-    <div>
-        <NavbarPages/>
-        <HeroPage/>
+      <div>
+      <Routes>
+        <Route path='/' element={<Layout />}>
+          <Route path='/Hero' element={<HeroPage />} />
+          <Route path='/Projects' element={<ProjectPages />} />
+        </Route>
+      </Routes>
     </div>
     </>
   )
 }
 
-export default Routes
+export default AppRoutes
