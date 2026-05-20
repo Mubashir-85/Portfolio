@@ -54,10 +54,10 @@ function Hero() {
 
   return (
     <div className="h-screen bg-[#0c0a09] flex items-center justify-center overflow-hidden">
-      <div className="flex flex-col lg:flex-row items-center justify-between w-full max-w-7xl mx-auto px-6 lg:px-20 gap-12 lg:gap-20">
+      <div className="flex flex-col-reverse lg:flex-row items-center justify-between w-full max-w-7xl mx-auto px-6 lg:px-20 gap-12 lg:gap-20">
         
         {/* Left Side - Intro */}
-        <div className="flex flex-col items-start justify-center text-left flex-1">
+        <div className="flex flex-col items-start justify-center text-left">
           <h2 
             className="text-3xl lg:text-5xl font-bold tracking-wide text-[#fbbf24] mb-2"
             style={{ fontFamily: "'Playfair Display', 'Georgia', serif" }}
