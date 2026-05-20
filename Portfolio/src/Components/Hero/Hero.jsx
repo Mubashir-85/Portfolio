@@ -1,5 +1,5 @@
 import React, { useState, useEffect } from 'react'
-import { Code2, Server, Database, Cpu, Terminal } from 'lucide-react'
+import { Code2, Server, Database, Cpu, CodeXml } from 'lucide-react'
 
 function Hero() {
   const titles = [
@@ -118,9 +118,9 @@ function Hero() {
                 </div>
               </div>
               
-              {/* Center decorative element */}
+              {/* Center decorative element - Changed to CodeXml */}
               <div className="absolute -top-4 -right-4 bg-[#fbbf24] text-[#0c0a09] rounded-full p-3 shadow-lg">
-                <Terminal className="w-6 h-6 lg:w-8 lg:h-8" />
+                <CodeXml className="w-6 h-6 lg:w-8 lg:h-8" />
               </div>
             </div>
           </div>
