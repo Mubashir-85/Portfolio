@@ -1,8 +1,9 @@
 import React from 'react'
+import Project from '../../Project/Project'
 
 function ProjectPages() {
   return (
-    <div>ProjectPages</div>
+    <Project/>
   )
 }
 
