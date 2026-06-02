@@ -42,22 +42,20 @@ function Project() {
                 Frontend Projects
               </h2>
             </div>
-            <div className="w-full h-auto grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6 mt-5">
+            <div className="w-full grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6 mt-5 items-stretch">
               {frontend_projects.map((project, index) => {
                 return (
                   <div
-                    className="w-full h-auto flex flex-col gap-2 justify-between bg-[#1C1B1B] border p-4 rounded-lg"
+                    className="w-full h-auto flex flex-col gap-2  bg-[#1C1B1B] border p-6 rounded-lg"
                     key={index}
                   >
-                    <div>
-                      <h3 className="text-[#E5E2E1] text-2xl font-medium">
-                        {project.Name}
-                      </h3>
+                    <h3 className="text-[#E5E2E1] text-2xl font-medium">
+                      {project.Name}
+                    </h3>
 
-                      <p className="text-[#D4C5AB] mt-5">
-                        {project.Description}
-                      </p>
-                    </div>
+                    <p className="text-[#D4C5AB] mt-5 min-h-[180px]">{project.Description}</p>
+
+                    <div className="bg-[#D4C5AB] h-[1px] w-full mt-5 " />
                     <a
                       href={project.link}
                       className="text-[#D4C5AB] flex items-center text-sm mt-5 gap-3"
