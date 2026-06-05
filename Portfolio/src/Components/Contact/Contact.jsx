@@ -130,7 +130,7 @@ function Contact() {
                 </a>
 
                 <a
-                  href="https://linkedin.com/"
+                  href="https://www.linkedin.com/in/-mubashir-shaikh-/"
                   target="_blank"
                   rel="noreferrer"
                   className="flex items-center gap-4 text-white"
