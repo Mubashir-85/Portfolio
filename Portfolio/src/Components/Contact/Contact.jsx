@@ -12,7 +12,6 @@ function Contact() {
           <div>
             <h1 className="text-5xl md:text-6xl font-bold text-white">
               Get In Touch
-              <span className="text-[#E8D5B5]">|</span>
             </h1>
 
             <p className="text-gray-300 mt-6 max-w-md leading-8">
@@ -29,7 +28,7 @@ function Contact() {
 
                 <input
                   type="text"
-                  placeholder="John Doe"
+                  placeholder="Enter Your Name"
                   className="w-full bg-black border border-[#2a2a2a] rounded-lg p-4 text-white outline-none"
                 />
               </div>
@@ -41,7 +40,7 @@ function Contact() {
 
                 <input
                   type="email"
-                  placeholder="john@example.com"
+                  placeholder="Enter Your Email"
                   className="w-full bg-black border border-[#2a2a2a] rounded-lg p-4 text-white outline-none"
                 />
               </div>
