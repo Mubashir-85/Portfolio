@@ -1,4 +1,5 @@
-import { Mail, Github, Linkedin } from "lucide-react";
+import React from "react";
+import { FaGithub, FaLinkedin, FaEnvelope } from "react-icons/fa";
 
 function Contact() {
   return (
@@ -15,9 +16,9 @@ function Contact() {
             </h1>
 
             <p className="text-gray-300 mt-6 max-w-md leading-8">
-              Currently open for new opportunities. Whether you have
-              a question or just want to say hi, I'll try my best to
-              get back to you!
+              Currently open for new opportunities. Whether you have a
+              question or just want to say hi, I'll try my best to get
+              back to you!
             </p>
 
             <form className="mt-10 space-y-6">
@@ -75,12 +76,12 @@ function Contact() {
               </h3>
 
               <div className="flex items-center gap-4">
-                <div className="w-12 h-12 rounded-full bg-[#2A2A2A] flex items-center justify-center">
-                  <Mail size={20} />
+                <div className="w-12 h-12 rounded-full bg-[#2A2A2A] flex items-center justify-center text-white">
+                  <FaEnvelope size={20} />
                 </div>
 
                 <p className="text-white">
-                  hello@developer.com
+                  shaikhmubashirahmed123@gmail.com
                 </p>
               </div>
             </div>
@@ -93,22 +94,28 @@ function Contact() {
               <div className="space-y-4">
 
                 <a
-                  href="#"
+                  href="https://github.com/Mubashir-85"
+                  target="_blank"
+                  rel="noreferrer"
                   className="flex items-center gap-4 text-white"
                 >
                   <div className="w-12 h-12 rounded-full bg-[#2A2A2A] flex items-center justify-center">
-                    <Github size={20} />
+                    <FaGithub size={20} />
                   </div>
+
                   GitHub Profile
                 </a>
 
                 <a
-                  href="#"
+                  href="https://linkedin.com/"
+                  target="_blank"
+                  rel="noreferrer"
                   className="flex items-center gap-4 text-white"
                 >
                   <div className="w-12 h-12 rounded-full bg-[#2A2A2A] flex items-center justify-center">
-                    <Linkedin size={20} />
+                    <FaLinkedin size={20} />
                   </div>
+
                   LinkedIn Network
                 </a>
 
@@ -117,6 +124,7 @@ function Contact() {
 
           </div>
         </div>
+
       </div>
     </section>
   );
