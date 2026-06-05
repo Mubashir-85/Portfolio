@@ -28,7 +28,7 @@ function Footer() {
             </a>
 
             <a
-              href="https://linkedin.com/"
+              href="https://www.linkedin.com/in/-mubashir-shaikh-/"
               target="_blank"
               rel="noopener noreferrer"
               className="hover:text-white transition"
