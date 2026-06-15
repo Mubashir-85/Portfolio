@@ -12,7 +12,7 @@ function Footer() {
             </h2>
 
             <p className="text-sm mt-3 text-[#D6C7AD]">
-              © 2024 Developer Portfolio. All rights reserved.
+              © 2026 Developer Portfolio. All rights reserved.
             </p>
           </div>
 

@@ -5,10 +5,15 @@ import {
   FileCode, 
   Atom, 
   Wind, 
+  LayoutGrid,
   Coffee, 
   Leaf, 
   Database, 
-  Table 
+  Table,
+  PenTool,
+  Pen,
+  Layers,
+  Image
 } from 'lucide-react'
 
 function TechStack() {
@@ -34,6 +39,7 @@ function TechStack() {
       bgColor: "bg-cyan-400/5",
       technologies: [
         { name: "Tailwind CSS", icon: <Wind className="w-5 h-5" /> },
+        { name: "Bootstrap", icon: <LayoutGrid className="w-5 h-5" /> },
       ]
     },
     {
@@ -56,12 +62,24 @@ function TechStack() {
       technologies: [
         { name: "MySQL", icon: <Table className="w-5 h-5" /> },
       ]
+    },
+    {
+      title: "UI/UX Design",
+      icon: <PenTool className="w-6 h-6" />,
+      color: "text-pink-400",
+      borderColor: "border-pink-400/30",
+      bgColor: "bg-pink-400/5",
+      technologies: [
+        { name: "Figma", icon: <Pen className="w-5 h-5" /> },
+        { name: "Adobe XD", icon: <Layers className="w-5 h-5" /> },
+        { name: "Canva", icon: <Image className="w-5 h-5" /> },
+      ]
     }
   ]
 
   return (
     <div className="min-h-screen bg-[#0c0a09] flex items-center justify-center py-20 px-6">
-      <div className="w-full max-w-6xl mx-auto">
+      <div className="w-full max-w-7xl mx-auto">
         
         {/* Section Header */}
         <div className="text-center mb-16">
@@ -80,8 +98,8 @@ function TechStack() {
           </p>
         </div>
 
-        {/* Tech Grid */}
-        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6">
+        {/* Tech Grid - 5 columns on large screens */}
+        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-5 gap-6">
           {techCategories.map((category, index) => (
             <div 
               key={index}
